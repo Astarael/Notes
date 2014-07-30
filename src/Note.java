@@ -3,7 +3,8 @@ import java.util.ArrayList;
 
 public abstract class Note {
 	
-	static ArrayList<String> fields = null;
+	private static ArrayList<String> fields = null;
+	private static boolean completed = false;
 	
 	public static void addFields (ArrayList<String> a) {
 		
@@ -29,6 +30,17 @@ public abstract class Note {
 		
 	}
 	
+	public static void complete () {
+		
+		completed = true;
+		
+	}
+	
+	public static void uncomplete () {
+		
+		completed = false;
+		
+	}
 	
 
 }
